@@ -1,6 +1,6 @@
 {
 	"name": "fanbox-downloader",
-	"version": "3.5.0",
+	"version": "3.5.1",
 	"description": "pixiv FANBOXの投稿を投稿毎にフォルダ分け → ZIPとして一括ダウンロードするブックマークレット",
 	"scripts": {
 		"build": "esbuild --bundle --format=esm --minify ./fanbox-downloader.ts --outfile=./docs/fanbox-downloader.min.js",
