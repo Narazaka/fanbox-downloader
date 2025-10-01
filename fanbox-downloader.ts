@@ -169,7 +169,7 @@ async function getItemsById(downloadManage: DownloadManage) {
 		`https://api.fanbox.cc/post.paginateCreator?creatorId=${downloadManage.userId}`,
 	).body;
 	for (let i = 0; i < urls.length; i++) {
-		console.log(`${i + 1}回目`);
+		console.log(`${i + 1} / ${urls.length}回目`);
 		await addByPostListUrl(downloadManage, urls[i]);
 		await DownloadManage.utils.sleep(2000);
 	}
