@@ -171,7 +171,7 @@ async function getItemsById(downloadManage: DownloadManage) {
 	for (let i = 0; i < urls.length; i++) {
 		console.log(`${i + 1}回目`);
 		await addByPostListUrl(downloadManage, urls[i]);
-		await DownloadManage.utils.sleep(100);
+		await DownloadManage.utils.sleep(2000);
 	}
 }
 
@@ -188,7 +188,7 @@ async function addByPostListUrl(downloadManage: DownloadManage, url: string): Pr
 			if (post.body) {
 				addByPostInfo(downloadManage, post);
 			} else if (!post.isRestricted) {
-				await DownloadManage.utils.sleep(100);
+				await DownloadManage.utils.sleep(500);
 				addByPostInfo(downloadManage, getPostInfoById(post.id));
 			}
 		} else break;
